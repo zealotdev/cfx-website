@@ -1,0 +1,130 @@
+@import './mixins/media.scss';
+@import './utils/presets.scss';
+
+.heroSection {
+  position: relative;
+  display: block;
+  z-index: 1;
+  padding: $universalSmallPadding;
+  display: flex;
+  flex-direction: column;
+
+  @include for-desktop-up {
+    height: 75vh;
+  }
+  @include for-tablet-portrait-up {
+    padding: $universalMediumPadding;
+  }
+  @include for-tablet-landscape-up {
+    justify-content: space-between;
+    padding: $universalLargePadding;
+  }
+
+  @include for-tablet-landscape-up {
+    padding: $universalLargePadding;
+  }
+
+  &::after {
+    content: '';
+    background-image: linear-gradient(
+        to top right,
+        rgba(10, 17, 27, 0.3) 50%,
+        rgba(223, 168, 46, 0.8)
+      ),
+      url('../public/globe.png');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+    position: absolute;
+    z-index: -1;
+  }
+
+  & h4 {
+    font-size: 1.8rem;
+    position: relative;
+    padding-left: 6rem;
+    line-height: 0.1rem;
+    font-weight: 200;
+    font-style: italic;
+
+    @include for-tablet-landscape-up {
+      font-size: 3.8rem;
+      padding-left: 8rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 0.3rem;
+      width: 5rem;
+      border-radius: 0.2rem;
+      background-color: #dfa82e;
+
+      @include for-tablet-landscape-up {
+        height: 0.4rem;
+        width: 7rem;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+
+  & h1 {
+    font-size: 2rem;
+    width: 90%;
+    text-transform: capitalize;
+
+    @include for-tablet-portrait-up {
+      font-size: 2.4rem;
+      width: 80%;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 5rem;
+      width: 70%;
+    }
+  }
+
+  & p {
+    font-size: 1.6rem;
+    width: 90%;
+    letter-spacing: 0.15rem;
+    font-weight: 300;
+    color: $textGray;
+    text-align: left;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.8rem;
+      width: 80%;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 2.2rem;
+      width: 60%;
+    }
+  }
+
+  & button {
+    transition: all ease 0.3s;
+    padding: 1rem 1.2rem;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    width: 12rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primaryColor, 15);
+    }
+  }
+}

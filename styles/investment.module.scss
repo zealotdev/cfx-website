@@ -1,0 +1,45 @@
+@import './utils/presets.scss';
+
+.investmentSection {
+  color: #fff;
+  // padding: 6rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.title {
+  font-weight: 400;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 22rem;
+}
+.ctaOne {
+  padding: 1rem 1.2rem;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  width: 10rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primaryColor, 15);
+  }
+}
+.ctaTwo {
+  @extend .ctaOne;
+  background-color: $secondaryColor;
+  color: $primaryColor;
+  border: 2px solid $primaryColor;
+}

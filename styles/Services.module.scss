@@ -1,0 +1,122 @@
+@import './utils/presets.scss';
+
+.services {
+  margin: 4rem 0;
+
+  &_intro {
+    text-align: center;
+
+    & h4 {
+      font-size: 4rem;
+      font-weight: 200;
+      margin: 0 auto 2rem auto;
+      text-transform: capitalize;
+    }
+
+    & p {
+      color: $primaryColor;
+      width: 40%;
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 300;
+      letter-spacing: 0.17rem;
+    }
+  }
+
+  &_list {
+    margin: 10rem 0;
+    padding: 0 20rem;
+  }
+
+  &_listItemOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 30rem;
+    border: 2px dotted $primaryColor;
+    // background-color: darken($secondaryColor, 10);
+
+    &Title {
+      @extend .centralize;
+      width: 70%;
+      height: 100%;
+      font-size: 4rem;
+      padding: 2rem;
+      text-align: left;
+      background-color: $primaryColor;
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    }
+    &Details {
+      padding: 2rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.17rem;
+      font-weight: 300;
+      color: $primaryColor;
+
+      & ul > li {
+        line-height: 3.175rem;
+      }
+    }
+    &Button {
+      transition: all ease 0.3s;
+      margin-left: 2rem;
+      margin-top: 2rem;
+      padding: 1rem 1.2rem;
+      background-color: $primaryColor;
+      color: $secondaryColor;
+      border: none;
+      border-radius: 0.2rem;
+      outline: none;
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 1.4rem;
+      width: 12rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primaryColor, 10);
+      }
+    }
+  }
+
+  &_listItemTwo {
+    @extend .services_listItemOne;
+    background-color: $primaryColor;
+    border: 2px dotted $secondaryColor;
+    margin: 2rem 0;
+
+    &Title {
+      @extend .centralize;
+      width: 70%;
+      height: 100%;
+      font-size: 4rem;
+      justify-self: end;
+      text-align: right;
+      padding: 2rem;
+      background-color: $secondaryColor;
+      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    }
+    &Details {
+      padding: 2rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.17rem;
+      font-weight: 300;
+      color: $secondaryColor;
+
+      & ul > li {
+        line-height: 3.175rem;
+      }
+    }
+    &Button {
+      @extend .services_listItemOneButton;
+      background-color: $primaryColor;
+      border: 2px solid $secondaryColor;
+      color: $secondaryColor;
+
+      &:hover {
+        background-color: darken($primaryColor, 10);
+      }
+    }
+  }
+}

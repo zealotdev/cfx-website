@@ -1,0 +1,185 @@
+@import './utils/presets.scss';
+@import './mixins/media.scss';
+
+// Intro section
+.intro {
+  position: relative;
+  text-align: center;
+  height: 60rem;
+  padding-top: 4rem;
+  width: 100%;
+
+  & h4 {
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+    color: $primaryColor;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-bottom: 2px solid #fff;
+      height: 0.4rem;
+      width: 3%;
+      top: 50%;
+      left: 42%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      border-bottom: 2px solid #fff;
+      height: 0.4rem;
+      width: 3%;
+      top: 50%;
+      right: 42%;
+    }
+  }
+
+  & h2 {
+    font-size: 6rem;
+    font-weight: 200;
+    width: 40%;
+    margin: 0 auto 2rem auto;
+    text-transform: capitalize;
+  }
+
+  & p {
+    font-size: 1.6rem;
+    width: 30%;
+    font-weight: 300;
+    margin: 0 auto;
+    color: $textGray;
+    letter-spacing: 0.17rem;
+  }
+  &::before {
+    content: '';
+    background: url('../public/worldmap.png') center no-repeat;
+    background-size: contain;
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+}
+
+// Core Values Section
+.coreValues {
+  padding: 0 4rem;
+
+  @include for-desktop-up {
+    padding: 0 20%;
+  }
+
+  & h4 {
+    color: $primaryColor;
+    font-size: 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      border-bottom: 2px solid $primaryColor;
+      height: 0.4rem;
+      width: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 13rem;
+    }
+  }
+
+  & .valueWrapper {
+    @include for-tablet-landscape-up {
+      justify-content: space-between;
+      display: flex;
+    }
+
+    & .Image {
+      display: none;
+
+      @include for-tablet-landscape-up {
+        display: block;
+      }
+    }
+    & .values {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & .valueItem {
+        display: flex;
+
+        & .valueDetails {
+          width: 40%;
+          & span {
+            color: $primaryColor;
+            font-size: 2.2rem;
+          }
+
+          & p {
+            font-size: 1.5rem;
+            color: $textGray;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mission section
+.mission {
+  height: 30rem;
+  background-color: $primaryColor;
+  margin: 10rem 0;
+  color: $textDark;
+  padding: 2rem;
+
+  & h4 {
+    text-align: right;
+    font-size: 2.2rem;
+    font-weight: 400;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-bottom: 2px solid $textDark;
+      height: 0.4rem;
+      width: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 13rem;
+    }
+  }
+
+  & p {
+    font-size: 3.6rem;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    font-weight: 200;
+    position: relative;
+
+    &::before {
+      content: '"';
+      position: absolute;
+      font-size: 20rem;
+      top: 5rem;
+      color: $textDark;
+      transform: translateY(-50%);
+      left: 1rem;
+      opacity: 0.5;
+    }
+    &::after {
+      content: '"';
+      position: absolute;
+      font-size: 20rem;
+      top: 9rem;
+      color: $textDark;
+      transform: translateY(-50%);
+      right: -2rem;
+      opacity: 0.5;
+    }
+  }
+}

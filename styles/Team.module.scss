@@ -1,0 +1,41 @@
+@import './utils/presets.scss';
+
+.team {
+  text-align: center;
+  margin-bottom: 4rem;
+  width: 80%;
+  margin: 0 auto;
+
+  &Intro {
+    font-size: 3rem;
+  }
+
+  &Members {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.CEO {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 20%;
+  background-color: $primaryColor;
+}
+.others {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4rem 0;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 20%;
+  background-color: $primaryColor;
+}

@@ -1,0 +1,46 @@
+@import './utils/presets.scss';
+
+.footer {
+  display: flex;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 40rem;
+  line-height: 1.75rem;
+  background-color: rgba($color: #090b0e, $alpha: 0.9);
+}
+
+.footerDetails {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-around;
+  padding: 4rem 0;
+}
+.addresses {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+.links {
+}
+.subTitle {
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.contents {
+  margin-top: 1rem;
+}
+.linksItem {
+  transition: all 0.3s ease;
+  &:hover {
+    border-bottom: 1px solid $primaryColor;
+  }
+}
+.copyright {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: $secondaryColor;
+}

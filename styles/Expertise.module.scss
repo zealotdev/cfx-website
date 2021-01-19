@@ -1,0 +1,249 @@
+@import './mixins/media.scss';
+@import './utils/presets.scss';
+
+.expertiseSection {
+  padding: $universalSmallPadding;
+  position: relative;
+
+  @include for-tablet-portrait-up {
+    padding: $universalMediumPadding;
+    margin-top: -2rem;
+  }
+  @include for-tablet-landscape-up {
+    padding: $universalLargePadding;
+    margin-top: -8rem;
+  }
+
+  @include for-desktop-up {
+    margin-top: 4rem;
+  }
+
+  &::after {
+    content: '';
+    background-image: url('../public/worldmap.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 120%;
+    width: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+    position: absolute;
+
+    @include for-phone-only {
+      height: 100%;
+      top: -35%;
+    }
+    @include for-tablet-portrait-up {
+      top: -38%;
+    }
+    @include for-desktop-up {
+      top: -20%;
+    }
+  }
+}
+
+.intro {
+  padding: 2rem 0;
+
+  & h3 {
+    font-size: 1.8rem;
+    width: 30%;
+    font-style: italic;
+    font-weight: 300;
+
+    @include for-tablet-portrait-up {
+      font-size: 2.4rem;
+      width: 20%;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 3rem;
+      width: 20%;
+    }
+    @include for-desktop-up {
+      font-size: 3rem;
+      width: 10%;
+    }
+  }
+
+  & p {
+    font-size: 1.55rem;
+    font-weight: 300;
+    width: 100%;
+    color: $textGray;
+    letter-spacing: 0.15rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.8rem;
+      width: 80%;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 2rem;
+      width: 70%;
+    }
+    @include for-desktop-up {
+      font-size: 2.2;
+      width: 50%;
+    }
+  }
+}
+
+.desc {
+  width: 100%;
+  margin-top: 8rem;
+
+  & h3 {
+    text-align: center;
+    font-size: 1.85rem;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 4rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 2.2rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 2.4rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 2.85rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 120%;
+      right: 0;
+      width: 4rem;
+      height: 2rem;
+      border: 0;
+      opacity: 0.3;
+      border-top: 0.4rem dotted $primaryColor;
+      border-right: 0.4rem dotted $primaryColor;
+      transform: translateY(-50%);
+
+      @include for-tablet-portrait-up {
+        width: 8rem;
+      }
+      @include for-tablet-landscape-up {
+        width: 10rem;
+        border-top: 0.6rem dotted $primaryColor;
+        border-right: 0.6rem dotted $primaryColor;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 120%;
+      left: 0;
+      width: 4rem;
+      height: 2rem;
+      border: 0;
+      opacity: 0.3;
+      border-top: 0.4rem dotted $primaryColor;
+      border-left: 0.4rem dotted $primaryColor;
+      transform: translateY(-50%);
+
+      @include for-tablet-portrait-up {
+        width: 8rem;
+      }
+
+      @include for-tablet-landscape-up {
+        width: 10rem;
+        border-top: 0.6rem dotted $primaryColor;
+        border-left: 0.6rem dotted $primaryColor;
+      }
+    }
+  }
+}
+
+.cards {
+  padding: 1rem 0 0 0;
+
+  @include for-tablet-landscape-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 0.4rem dotted $primaryColor;
+    width: 12rem;
+    opacity: 0.3;
+
+    @include for-tablet-landscape-up {
+      border-bottom: 0.6rem dotted $primaryColor;
+      width: 20rem;
+    }
+  }
+
+  & .card {
+    border-top-right-radius: 20%;
+    max-height: 15rem;
+    min-height: 15rem;
+    display: flex;
+
+    @include for-tablet-landscape-up {
+      padding: 2rem;
+      max-height: 20rem;
+      min-height: 20rem;
+      position: relative;
+    }
+
+    @include for-desktop-up {
+      max-height: 24rem;
+      min-height: 24rem;
+    }
+
+    &_image {
+      max-width: 11rem;
+      max-height: 12rem;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+      @include for-tablet-landscape-up {
+        max-width: 20rem;
+        max-height: 20rem;
+      }
+    }
+
+    &_content {
+      padding: 0 0.6rem;
+      background-color: transparent;
+
+      @include for-tablet-landscape-up {
+        padding: 0 2rem;
+      }
+    }
+    &_title {
+      font-size: 3vw;
+      color: $primaryColor;
+      width: 100%;
+
+      @include for-tablet-landscape-up {
+        font-size: 1.4vw;
+        width: 80%;
+      }
+    }
+
+    &_desc {
+      color: gray;
+      font-size: 2vw;
+
+      @include for-tablet-landscape-up {
+        font-size: 0.9vw;
+      }
+    }
+  }
+}
