@@ -28,7 +28,7 @@ export default function Home() {
         <Services />
       </main>
 
-      <Footer />
+      <Footer showInvestment={true} />
     </div>
   );
 }

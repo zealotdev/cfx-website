@@ -33,6 +33,13 @@
 .contents {
   margin-top: 1rem;
 }
+.icons {
+  margin-top: 1rem;
+
+  & a {
+    margin-right: 0.6rem;
+  }
+}
 .linksItem {
   transition: all 0.3s ease;
   &:hover {
