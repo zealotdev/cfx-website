@@ -2,6 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: #12161b;
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: 0.125rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -9,8 +13,23 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
 }
 
 * {
   box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  padding: 0 1rem;
+  margin: auto;
 }

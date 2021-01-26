@@ -1,0 +1,126 @@
+@import './mixins/media.scss';
+@import './utils//presets.scss';
+
+.container {
+  min-height: 100vh;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    @include for-phone-only {
+      background-color: rgba($color: #090b0e, $alpha: 0.3);
+    }
+
+    @include for-tablet-landscape-up {
+      padding: 0 12rem;
+    }
+  }
+
+  &_tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    & button {
+      transition: all ease 0.3s;
+      padding: 1rem 1.2rem;
+      background-color: $secondaryColor;
+      color: $primaryColor;
+      border: 2px solid $primaryColor;
+      border-radius: 0.2rem;
+      outline: none;
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 1.4rem;
+      width: 10rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primaryColor, 15);
+      }
+
+      @include for-phone-only {
+        display: none;
+      }
+    }
+  }
+
+  &_humburger {
+    & span {
+      display: block;
+      margin-bottom: 0.6rem;
+      width: 3.4rem;
+      height: 0.2rem;
+      background-color: #fff;
+      border-radius: 0.2rem;
+
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+  }
+
+  &_el {
+    width: 100%;
+    background-color: rgba($color: #090b0e, $alpha: 0.9);
+    padding: 1rem 0;
+
+    @include for-phone-only {
+      display: none;
+    }
+  }
+  &_links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 2.4rem auto 0 auto;
+    position: relative;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.4rem;
+    }
+
+    @include for-tablet-landscape-up {
+      font-size: 1.6rem;
+    }
+
+    &::before {
+      content: '';
+      height: 0.4rem;
+      width: 10%;
+      border-radius: 0.4rem;
+      background-color: #dfa82e;
+      position: absolute;
+      top: -0.8rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &_link_item {
+    border-bottom: #dfa82e 0.2rem solid;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: all ease 0.3s;
+
+    &:hover {
+      color: #dfa82e;
+      border-bottom: #dfa82e 0.2rem dashed;
+    }
+  }
+}

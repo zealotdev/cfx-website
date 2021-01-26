@@ -1,0 +1,17 @@
+// Color schemes
+$primaryColor: #dfa82e;
+$secondaryColor: #0a111b;
+$textGray: #cfcece;
+$textDark: #12161b;
+
+// Padding
+$universalSmallPadding: 2rem;
+$universalMediumPadding: 4rem;
+$universalLargePadding: 8rem 12rem;
+
+// Centralize
+.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
