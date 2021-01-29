@@ -111,7 +111,7 @@ export default function Services() {
                 </button>
               </div>
               <div className={styles.services_listItemTwoTitle}>
-                Technology Consultancy Services
+                Investment Management
               </div>
             </div>
           </section>
