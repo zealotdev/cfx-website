@@ -10,11 +10,17 @@
   width: 100%;
 
   & h4 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 400;
     position: relative;
     color: $primaryColor;
 
+    @include for-tablet-portrait-up {
+      font-size: 2.6rem;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 3rem;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -22,7 +28,14 @@
       height: 0.4rem;
       width: 3%;
       top: 50%;
-      left: 42%;
+      left: 24%;
+
+      @include for-tablet-portrait-up {
+        left: 34%;
+      }
+      @include for-desktop-up {
+        left: 40%;
+      }
     }
     &::after {
       content: '';
@@ -31,42 +44,85 @@
       height: 0.4rem;
       width: 3%;
       top: 50%;
-      right: 42%;
+      right: 24%;
+
+      @include for-tablet-portrait-up {
+        right: 34%;
+      }
+      @include for-desktop-up {
+        right: 40%;
+      }
     }
   }
 
   & h2 {
-    font-size: 6rem;
+    font-size: 2.8rem;
     font-weight: 200;
-    width: 40%;
+    width: 70%;
     margin: 0 auto 2rem auto;
     text-transform: capitalize;
+
+    @include for-tablet-portrait-up {
+      font-size: 4rem;
+      width: 60%;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 4.8rem;
+      width: 50%;
+    }
+    @include for-desktop-up {
+      font-size: 6rem;
+      width: 40%;
+    }
   }
 
   & p {
     font-size: 1.6rem;
-    width: 30%;
+    width: 80%;
     font-weight: 300;
     margin: 0 auto;
     color: $textGray;
     letter-spacing: 0.17rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.8rem;
+      width: 60%;
+    }
+    @include for-tablet-landscape-up {
+      width: 40%;
+      font-size: 2rem;
+    }
   }
   &::before {
     content: '';
     background: url('../public/worldmap.png') center no-repeat;
     background-size: contain;
-    height: 120%;
+    height: 80%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.3;
+
+    @include for-tablet-portrait-up {
+      height: 90%;
+    }
+    @include for-desktop-up {
+      height: 120%;
+    }
+    @include for-big-desktop-up {
+      height: 120%;
+    }
   }
 }
 
 // Core Values Section
 .coreValues {
-  padding: 0 4rem;
+  padding: 0 2rem;
+
+  @include for-tablet-portrait-up {
+    padding: 0 2rem;
+  }
 
   @include for-desktop-up {
     padding: 0 20%;
@@ -77,19 +133,28 @@
     font-size: 2rem;
     position: relative;
 
+    @include for-tablet-portrait-up {
+      font-size: 2.4rem;
+    }
+
     &::after {
       content: '';
       position: absolute;
       border-bottom: 2px solid $primaryColor;
       height: 0.4rem;
-      width: 4%;
+      width: 3%;
       top: 50%;
       transform: translateY(-50%);
       left: 13rem;
+
+      @include for-tablet-portrait-up {
+        left: 15rem;
+        width: 4%;
+      }
     }
   }
 
-  & .valueWrapper {
+  & .valuesWrapper {
     @include for-tablet-landscape-up {
       justify-content: space-between;
       display: flex;
@@ -97,6 +162,7 @@
 
     & .Image {
       display: none;
+      width: 20%;
 
       @include for-tablet-landscape-up {
         display: block;

@@ -29,7 +29,7 @@ export default function About() {
           </section>
           <section className={styles.coreValues}>
             <h4>Our Values</h4>
-            <div className={styles.valueWrapper}>
+            <div className={styles.valuesWrapper}>
               <div className={styles.Image}>
                 <Image
                   src="/globe.png"
@@ -90,7 +90,7 @@ export default function About() {
             </p>
           </section>
         </main>
-        <Footer />
+        <Footer showInvestment={true} />
       </body>
     </div>
   );

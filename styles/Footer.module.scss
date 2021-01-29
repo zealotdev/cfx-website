@@ -1,4 +1,5 @@
 @import './utils/presets.scss';
+@import './mixins/media.scss';
 
 .footer {
   display: flex;
@@ -13,16 +14,32 @@
 
 .footerDetails {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-content: space-around;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+
+  @include for-tablet-landscape-up {
+    flex-direction: row;
+    padding: 4rem 0;
+    justify-content: space-evenly;
+  }
 }
 .addresses {
   display: flex;
+  flex-direction: column;
   width: 40%;
   justify-content: space-between;
+  margin: 0 0 2rem 0;
+
+  @include for-tablet-landscape-up {
+    margin: 0;
+  }
 }
 .links {
+  margin: 0 0 2rem 0;
+  @include for-tablet-landscape-up {
+    margin: 0;
+  }
 }
 .subTitle {
   color: #fff;
