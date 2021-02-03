@@ -38,6 +38,7 @@ export default function About() {
                   layout="intrinsic"
                 />
               </div>
+              {/* ynyhy */}
               <div className={styles.values}>
                 <div className={styles.valueItem}>
                   <Image
