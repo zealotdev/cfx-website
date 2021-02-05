@@ -1,14 +1,21 @@
 @import './utils/presets.scss';
+@import './mixins/media.scss';
 
 .investmentSection {
   color: #fff;
-  // padding: 6rem;
   margin: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
+
+  @include for-tablet-portrait-up {
+    font-size: 1.8rem;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 2rem;
+  }
 }
 
 .title {

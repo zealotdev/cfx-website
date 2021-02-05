@@ -98,18 +98,6 @@
     @include for-tablet-landscape-up {
       font-size: 1.6rem;
     }
-
-    &::before {
-      content: '';
-      height: 0.4rem;
-      width: 10%;
-      border-radius: 0.4rem;
-      background-color: #dfa82e;
-      position: absolute;
-      top: -0.8rem;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 
   &_link_item {
