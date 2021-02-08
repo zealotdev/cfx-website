@@ -1,8 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../styles/NavBar.module.scss';
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import styles from "../styles/NavBar.module.scss";
 
 export default function NavBar() {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
   return (
     <nav className={styles.nav}>
       <div className={styles.nav_main}>
@@ -15,7 +19,7 @@ export default function NavBar() {
         </span>
         <div className={styles.nav_tooltip}>
           <button>Sign In</button>
-          <div className={styles.nav_humburger}>
+          <div className={styles.nav_humburger} onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>
@@ -24,17 +28,17 @@ export default function NavBar() {
       </div>
       <div className={styles.nav_el}>
         <ul className={styles.nav_links}>
-          <li className={styles.nav_link_item}>
+          <li className={styles.nav_link_item} onClick={closeMobileMenu}>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-          <li className={styles.nav_link_item}>
+          <li className={styles.nav_link_item} onClick={closeMobileMenu}>
             <Link href="/about">
               <a>About Us</a>
             </Link>
           </li>
-          <li className={styles.nav_link_item}>
+          <li className={styles.nav_link_item} onClick={closeMobileMenu}>
             <Link href="/contact">
               <a>Contact Us</a>
             </Link>

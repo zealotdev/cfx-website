@@ -70,6 +70,9 @@
       @include for-tablet-portrait-up {
         display: none;
       }
+      @include for-phone-only{
+        
+      }
     }
   }
 
