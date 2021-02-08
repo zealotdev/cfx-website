@@ -7,7 +7,7 @@ import styles from "../../styles/Contact.module.scss";
 const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
 
 const center = {
-  lat: -6.815475,
+  lat: -3.386925,
   lng: 36.682995,
 };
 const containerStyle = {
