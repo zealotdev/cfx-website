@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import NavBar from './navBar';
 import styles from '../styles/Services.module.scss';
 
@@ -35,9 +36,11 @@ export default function Services() {
                     forex traders just like you.
                   </li>
                 </ul>
-                <button className={styles.services_listItemOneButton}>
-                  Apply Now
-                </button>
+                <Link href="/notice">
+                  <button className={styles.services_listItemOneButton}>
+                    Apply Now
+                  </button>
+                </Link>
                 <div></div>
               </div>
             </div>
@@ -57,9 +60,11 @@ export default function Services() {
                     forex traders just like you.
                   </li>
                 </ul>
-                <button className={styles.services_listItemTwoButton}>
-                  Apply Now
-                </button>
+                <Link href="/notice">
+                  <button className={styles.services_listItemTwoButton}>
+                    Apply Now
+                  </button>
+                </Link>
               </div>
               <div className={styles.services_listItemTwoTitle}>
                 Technology Consultancy Services
@@ -84,9 +89,11 @@ export default function Services() {
                     forex traders just like you.
                   </li>
                 </ul>
-                <button className={styles.services_listItemOneButton}>
-                  Apply Now
-                </button>
+                <Link href="/notice">
+                  <button className={styles.services_listItemOneButton}>
+                    Apply Now
+                  </button>
+                </Link>
                 <div></div>
               </div>
             </div>
@@ -106,9 +113,11 @@ export default function Services() {
                     forex traders just like you.
                   </li>
                 </ul>
-                <button className={styles.services_listItemTwoButton}>
-                  Apply Now
-                </button>
+                <Link href="/notice">
+                  <button className={styles.services_listItemTwoButton}>
+                    Apply Now
+                  </button>
+                </Link>
               </div>
               <div className={styles.services_listItemTwoTitle}>
                 Investment Management

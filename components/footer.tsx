@@ -29,8 +29,8 @@ export default function Footer(props) {
             <span className={styles.subTitle}>Tanzania Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
-              <li>Phone : +255 634 345 324</li>
-              <li>Email : info@cfxgroup.com</li>
+              <li>Phone : +255 769 156 394</li>
+              <li>Email : info@cfxgroupinternational.com</li>
             </ul>
           </div>
           <div className={styles.address}>
@@ -38,7 +38,7 @@ export default function Footer(props) {
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
               <li>Phone : +255 634 345 324</li>
-              <li>Email : info@cfxgroup.com</li>
+              <li>Email : info@cfxgroupinternational.com</li>
             </ul>
           </div>
         </div>
@@ -67,16 +67,10 @@ export default function Footer(props) {
         <div className={styles.communities}>
           <span className={styles.subTitle}>CFX Communities</span>
           <div className={styles.icons}>
-            <a href="#">
-              <WhatsAppIcon fontSize={'large'} />
-            </a>
-            <a href="#">
-              <TelegramIcon fontSize={'large'} />
-            </a>
-            <a href="#">
+            <a href="https://www.instagram.com/cfxcompany/">
               <InstagramIcon fontSize={'large'} />
             </a>
-            <a href="#">
+            <a href="https://twitter.com/cfx_company">
               <TwiiterIcon fontSize={'large'} />
             </a>
             <a href="#">
