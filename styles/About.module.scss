@@ -5,12 +5,15 @@
 .intro {
   position: relative;
   text-align: center;
-  height: 60rem;
   padding-top: 4rem;
   width: 100%;
 
+  @include for-tablet-portrait-up {
+    margin-bottom: 0;
+  }
+
   & h4 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 400;
     position: relative;
     color: $primaryColor;
@@ -29,12 +32,14 @@
       width: 3%;
       top: 50%;
       left: 24%;
+      transform: translateY(-50%);
 
       @include for-tablet-portrait-up {
         left: 34%;
+        width: 2%;
       }
       @include for-desktop-up {
-        left: 40%;
+        left: 41%;
       }
     }
     &::after {
@@ -45,52 +50,51 @@
       width: 3%;
       top: 50%;
       right: 24%;
+      transform: translateY(-50%);
 
       @include for-tablet-portrait-up {
         right: 34%;
+        width: 2%;
       }
       @include for-desktop-up {
-        right: 40%;
+        right: 41%;
       }
     }
   }
 
   & h2 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 200;
-    width: 70%;
+    width: 90%;
     margin: 0 auto 2rem auto;
     text-transform: capitalize;
 
     @include for-tablet-portrait-up {
-      font-size: 4rem;
+      font-size: 3rem;
       width: 60%;
     }
     @include for-tablet-landscape-up {
-      font-size: 4.8rem;
-      width: 50%;
+      font-size: 4.2rem;
     }
     @include for-desktop-up {
-      font-size: 6rem;
-      width: 40%;
+      font-size: 4.8rem;
     }
   }
 
   & p {
-    font-size: 1.6rem;
-    width: 80%;
+    font-size: 1.4rem;
+    width: 85%;
     font-weight: 300;
     margin: 0 auto;
     color: $textGray;
     letter-spacing: 0.17rem;
 
     @include for-tablet-portrait-up {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       width: 60%;
     }
     @include for-tablet-landscape-up {
-      width: 40%;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
   &::before {
@@ -130,11 +134,12 @@
 
   & h4 {
     color: $primaryColor;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
     position: relative;
 
     @include for-tablet-portrait-up {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
 
     &::after {
@@ -145,47 +150,64 @@
       width: 3%;
       top: 50%;
       transform: translateY(-50%);
-      left: 13rem;
+      left: 10.5rem;
 
       @include for-tablet-portrait-up {
-        left: 15rem;
-        width: 4%;
+        left: 11.5rem;
+        width: 2%;
       }
     }
   }
 
-  & .valuesWrapper {
-    @include for-tablet-landscape-up {
+  & .values {
+    display: flex;
+    flex-direction: column;
+
+    @include for-tablet-portrait-up {
+      height: 20rem;
+      flex-direction: row;
       justify-content: space-between;
-      display: flex;
     }
 
-    & .Image {
-      display: none;
-      width: 20%;
-
-      @include for-tablet-landscape-up {
-        display: block;
-      }
-    }
-    & .values {
+    & .valueItem {
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: space-between;
-      & .valueItem {
-        display: flex;
 
-        & .valueDetails {
-          width: 40%;
-          & span {
-            color: $primaryColor;
-            font-size: 2.2rem;
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+      @include for-tablet-portrait-up {
+        &:not(:last-child) {
+          margin-bottom: 0rem;
+        }
+      }
+
+      & .valueDetails {
+        text-align: center;
+        & span {
+          color: $primaryColor;
+          font-size: 1.8rem;
+
+          @include for-tablet-portrait-up {
+            font-size: 1.8rem;
           }
+          @include for-tablet-landscape-up {
+            font-size: 2rem;
+          }
+        }
 
-          & p {
+        & p {
+          font-size: 1.5rem;
+          color: $textGray;
+          font-weight: 200;
+
+          @include for-tablet-portrait-up {
             font-size: 1.5rem;
-            color: $textGray;
-            font-weight: 200;
+          }
+          @include for-tablet-landscape-up {
+            font-size: 1.8rem;
           }
         }
       }
@@ -195,17 +217,23 @@
 
 // Mission section
 .mission {
-  height: 30rem;
   background-color: $primaryColor;
-  margin: 10rem 0;
+  margin-top: 6rem;
   color: $textDark;
   padding: 2rem;
 
   & h4 {
     text-align: right;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     position: relative;
+
+    @include for-tablet-portrait-up {
+      font-size: 2rem;
+    }
+    @include for-tablet-landscape-up {
+      margin-right: 10rem;
+    }
 
     &::before {
       content: '';
@@ -215,37 +243,28 @@
       width: 3%;
       top: 50%;
       transform: translateY(-50%);
-      right: 13rem;
+      right: 11.5rem;
+
+      @include for-tablet-portrait-up {
+        right: 12rem;
+        width: 2%;
+      }
     }
   }
 
   & p {
-    font-size: 3.6rem;
+    font-size: 1.6rem;
     text-align: center;
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
     font-weight: 200;
-    position: relative;
 
-    &::before {
-      content: '"';
-      position: absolute;
-      font-size: 20rem;
-      top: 5rem;
-      color: $textDark;
-      transform: translateY(-50%);
-      left: 1rem;
-      opacity: 0.5;
+    @include for-tablet-portrait-up {
+      font-size: 1.8rem;
     }
-    &::after {
-      content: '"';
-      position: absolute;
-      font-size: 20rem;
-      top: 9rem;
-      color: $textDark;
-      transform: translateY(-50%);
-      right: -2rem;
-      opacity: 0.5;
+    @include for-tablet-landscape-up {
+      font-size: 2rem;
+      width: 70%;
     }
   }
 }

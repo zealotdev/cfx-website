@@ -2,7 +2,7 @@ import Head from 'next/head';
 import NavBar from '../../components/navBar';
 import Footer from '../../components/footer';
 
-export default function () {
+export default function Contact() {
   return (
     <>
       <Head>
@@ -23,9 +23,13 @@ export default function () {
           <form>
             <input type="text" name="name" id="name" />
             <input type="email" name="email" id="email" />
-            <textarea name="message" id="message" cols={30} rows={10}>
-              Tell us your thoughts here .....
-            </textarea>
+            <textarea
+              name="message"
+              id="message"
+              cols={30}
+              rows={10}
+              defaultValue="Tell us your thoughts here ....."
+            ></textarea>
             <input type="submit" value="send us" />
           </form>
         </section>
