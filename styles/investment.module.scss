@@ -27,8 +27,14 @@
 .ctaButtons {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 40%;
 
+  @include for-xsmall-only {
+    width: 60%;
+  }
+  @include for-small-only {
+    width: 56%;
+  }
   @include for-tablet-portrait-up {
     width: 22rem;
   }
@@ -50,6 +56,10 @@
     background-color: darken($primaryColor, 15);
   }
 
+  @include for-xsmall-only {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
   @include for-tablet-landscape-up {
     font-size: 1.4rem;
     padding: 1rem 1.2rem;
