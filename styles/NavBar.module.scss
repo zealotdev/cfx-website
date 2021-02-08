@@ -59,16 +59,43 @@
   }
 
   &_humburger {
-    & span {
-      display: block;
-      margin-bottom: 0.6rem;
-      width: 3.4rem;
-      height: 0.2rem;
-      background-color: #fff;
-      border-radius: 0.2rem;
+    display: block;
 
-      @include for-tablet-portrait-up {
-        display: none;
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+
+  .mobileMenu {
+    height: 100vh;
+
+    & .mobi_link_item {
+      font-size: 1.8rem;
+      margin: 4rem;
+    }
+
+    &:hover,
+    &:active {
+      color: #dfa82e;
+    }
+
+    & button {
+      margin: 4rem;
+      transition: all ease 0.3s;
+      padding: 0.8rem 1.4rem;
+      background-color: $secondaryColor;
+      color: $primaryColor;
+      border: 2px solid $primaryColor;
+      border-radius: 0.2rem;
+      outline: none;
+      font-weight: 400;
+      text-transform: capitalize;
+      font-size: 1.3rem;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primaryColor, 15);
       }
     }
   }
