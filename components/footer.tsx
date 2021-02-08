@@ -25,20 +25,20 @@ export default function Footer(props) {
       </div>
       <div className={styles.footerDetails}>
         <div className={styles.addresses}>
-          <div className={styles.addresesTZ}>
+          <div className={styles.address}>
             <span className={styles.subTitle}>Tanzania Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
-              <li>Phone : +255 634 345 324</li>
-              <li>Email : info@cfxgroup.com</li>
+              <li>Phone : +255 769 156 394</li>
+              <li>Email : info@cfxgroupinternational.com</li>
             </ul>
           </div>
-          <div className={styles.addresesNG}>
+          <div className={styles.address}>
             <span className={styles.subTitle}>Nigeria Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
               <li>Phone : +255 634 345 324</li>
-              <li>Email : info@cfxgroup.com</li>
+              <li>Email : info@cfxgroupinternational.com</li>
             </ul>
           </div>
         </div>
@@ -67,23 +67,17 @@ export default function Footer(props) {
         <div className={styles.communities}>
           <span className={styles.subTitle}>CFX Communities</span>
           <div className={styles.icons}>
-            <a href="#">
-              <WhatsAppIcon />
+            <a href="https://www.instagram.com/cfxcompany/">
+              <InstagramIcon fontSize={'large'} />
+            </a>
+            <a href="https://twitter.com/cfx_company">
+              <TwiiterIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <TelegramIcon />
+              <FacebookIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <InstagramIcon />
-            </a>
-            <a href="#">
-              <TwiiterIcon />
-            </a>
-            <a href="#">
-              <FacebookIcon />
-            </a>
-            <a href="#">
-              <YoutubeIcon />
+              <YoutubeIcon fontSize={'large'} />
             </a>
           </div>
         </div>

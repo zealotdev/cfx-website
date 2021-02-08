@@ -191,15 +191,20 @@
 
   & .card {
     border-top-right-radius: 20%;
-    max-height: 15rem;
+
     min-height: 15rem;
     display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
 
     @include for-tablet-landscape-up {
       padding: 2rem;
       max-height: 20rem;
       min-height: 20rem;
       position: relative;
+      margin-bottom: 0;
     }
 
     @include for-desktop-up {
@@ -227,22 +232,28 @@
       }
     }
     &_title {
-      font-size: 3vw;
+      font-size: 1.6rem;
       color: $primaryColor;
       width: 100%;
 
+      @include for-small-only {
+        font-size: 1.5rem;
+      }
       @include for-tablet-landscape-up {
-        font-size: 1.4vw;
+        font-size: 1.8rem;
         width: 80%;
       }
     }
 
     &_desc {
       color: gray;
-      font-size: 2vw;
+      font-size: 1.4rem;
 
+      @include for-small-only {
+        font-size: 1.3rem;
+      }
       @include for-tablet-landscape-up {
-        font-size: 0.9vw;
+        font-size: 1.6rem;
       }
     }
   }

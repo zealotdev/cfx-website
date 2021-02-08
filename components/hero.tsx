@@ -1,6 +1,8 @@
-import Image from "next/image";
 
-import styles from "../styles/Hero.module.scss";
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '../styles/Hero.module.scss';
+
 
 export default function () {
   return (
@@ -15,7 +17,9 @@ export default function () {
         to be the best approach towards tackling 21st century problems. And we,
         at CFX are here to show you how.
       </p>
-      <button>Get Started.</button>
+      <Link href="/notice">
+        <button>Get Started.</button>
+      </Link>
     </section>
   );
 }
