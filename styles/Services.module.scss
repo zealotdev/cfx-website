@@ -8,42 +8,42 @@
     text-align: center;
 
     & h4 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 200;
       margin: 0 auto 2rem auto;
       text-transform: capitalize;
 
       @include for-tablet-portrait-up {
-        font-size: 3rem;
+        font-size: 2.2rem;
       }
       @include for-tablet-landscape-up {
-        font-size: 3.2rem;
+        font-size: 2.6rem;
       }
       @include for-desktop-up {
-        font-size: 4rem;
+        font-size: 2.8rem;
       }
     }
 
     & p {
       color: $primaryColor;
       width: 90%;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       text-align: center;
       margin: 0 auto;
       font-weight: 300;
       letter-spacing: 0.17rem;
 
       @include for-tablet-portrait-up {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         width: 80%;
       }
       @include for-tablet-landscape-up {
         width: 70%;
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       @include for-desktop-up {
         width: 45%;
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
     }
   }
@@ -73,21 +73,20 @@
     flex-direction: column;
     border: 2px dotted $primaryColor;
 
-    @include for-tablet-portrait-up {
+    @include for-tablet-landscape-up {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
 
     &Title {
       @extend .centralize;
-      width: 100%;
-      height: 100%;
+
       font-size: 1.8rem;
       padding: 1.6rem;
       text-align: center;
       background-color: $primaryColor;
 
-      @include for-tablet-portrait-up {
+      @include for-tablet-landscape-up {
         text-align: left;
         clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
         font-size: 1.8rem;
@@ -154,7 +153,7 @@
       text-align: center;
       background-color: $secondaryColor;
 
-      @include for-tablet-portrait-up {
+      @include for-tablet-landscape-up {
         text-align: right;
         width: 70%;
         clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
@@ -175,7 +174,7 @@
       font-size: 1.4rem;
       letter-spacing: 0.17rem;
       font-weight: 300;
-      color: $secondaryColor;
+      color: #ffffff;
 
       & ul > li {
         line-height: 3.175rem;
@@ -186,8 +185,8 @@
     &Button {
       @extend .services_listItemOneButton;
       background-color: $primaryColor;
-      border: 2px solid $secondaryColor;
-      color: $secondaryColor;
+      border: 2px solid #fff;
+      color: #fff;
 
       &:hover {
         background-color: darken($primaryColor, 10);

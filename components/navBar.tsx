@@ -9,7 +9,7 @@ export default function NavBar() {
         <span className={styles.nav_logo}>
           <Link href="/">
             <a>
-              <Image src="/logo.png" width="80" height="60" alt="CFX logo" />
+              <Image src="/logo.png" width="70" height="50" alt="CFX logo" />
             </a>
           </Link>
         </span>

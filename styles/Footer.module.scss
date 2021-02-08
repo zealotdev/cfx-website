@@ -27,34 +27,62 @@
 .addresses {
   display: flex;
   flex-direction: column;
-  width: 40%;
   justify-content: space-between;
   margin: 0 0 2rem 0;
 
   @include for-tablet-landscape-up {
     margin: 0;
+    width: 40%;
+  }
+
+  & .address {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    @include for-tablet-landscape-up {
+      margin-bottom: 0;
+    }
+
+    & .contents {
+      margin-top: 1rem;
+    }
+  }
+}
+.subTitle {
+  color: $primaryColor;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 600;
+
+  @include for-tablet-landscape-up {
+    font-size: 1.6rem;
   }
 }
 .links {
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 2rem 0;
   @include for-tablet-landscape-up {
     margin: 0;
   }
 }
-.subTitle {
-  color: #fff;
-  font-size: 1.4rem;
-  text-transform: capitalize;
-  font-weight: 600;
+
+.communities {
+  display: flex;
+  flex-direction: column;
+  & .subTitle {
+    text-align: center;
+  }
 }
-.contents {
-  margin-top: 1rem;
-}
+
 .icons {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 
   & a {
     margin-right: 0.6rem;
+    &:hover {
+      color: $primaryColor;
+    }
   }
 }
 .linksItem {

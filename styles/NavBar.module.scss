@@ -36,16 +36,16 @@
 
     & button {
       transition: all ease 0.3s;
-      padding: 1rem 1.2rem;
+      padding: 0.8rem 1.4rem;
       background-color: $secondaryColor;
       color: $primaryColor;
       border: 2px solid $primaryColor;
       border-radius: 0.2rem;
       outline: none;
-      font-weight: 600;
+      font-weight: 400;
       text-transform: capitalize;
-      font-size: 1.4rem;
-      width: 10rem;
+      font-size: 1.3rem;
+
       cursor: pointer;
 
       &:hover {

@@ -25,7 +25,7 @@ export default function Footer(props) {
       </div>
       <div className={styles.footerDetails}>
         <div className={styles.addresses}>
-          <div className={styles.addresesTZ}>
+          <div className={styles.address}>
             <span className={styles.subTitle}>Tanzania Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
@@ -33,7 +33,7 @@ export default function Footer(props) {
               <li>Email : info@cfxgroup.com</li>
             </ul>
           </div>
-          <div className={styles.addresesNG}>
+          <div className={styles.address}>
             <span className={styles.subTitle}>Nigeria Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
@@ -68,22 +68,22 @@ export default function Footer(props) {
           <span className={styles.subTitle}>CFX Communities</span>
           <div className={styles.icons}>
             <a href="#">
-              <WhatsAppIcon />
+              <WhatsAppIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <TelegramIcon />
+              <TelegramIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <InstagramIcon />
+              <InstagramIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <TwiiterIcon />
+              <TwiiterIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <FacebookIcon />
+              <FacebookIcon fontSize={'large'} />
             </a>
             <a href="#">
-              <YoutubeIcon />
+              <YoutubeIcon fontSize={'large'} />
             </a>
           </div>
         </div>
