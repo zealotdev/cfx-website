@@ -1,8 +1,9 @@
 import Head from "next/head";
-import { GoogleMap, LoadScript,Marker } from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import styles from "../../styles/Contact.module.scss";
+import { useState } from "react";
 
 const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
 
@@ -11,21 +12,35 @@ const center = {
   lng: 36.682995,
 };
 const containerStyle = {
-  width: "100vh",
+  width: "100%",
   height: "400px",
 };
 const position = {
   lat: -3.3706968,
   lng: 36.6850069,
-}
+};
 
-// 3.3706968,36.6850069,
-
-const onLoad = marker => {
-  console.log('marker: ', marker)
-}
+const onLoad = (marker) => {
+  console.log("marker: ", marker);
+};
 
 export default function Contact() {
+  const initialData = {
+    fullname: "",
+    email: "",
+    message: "",
+  };
+  const [input, setInput] = useState(initialData);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setInput({ ...input, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(input);
+  };
+  const { fullname, email, message } = input;
   return (
     <>
       <Head>
@@ -49,20 +64,30 @@ export default function Contact() {
           </LoadScript>
         </section>
         <section>
-          <form className={styles.form_container}>
-            <input type="text" name="name" id="name" placeholder="John Doe" />
+          <form className={styles.form_container} onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="fullname"
+              id="name"
+              placeholder="John Doe"
+              value={fullname}
+              onChange={handleChange}
+            />
             <input
               type="email"
               name="email"
               id="email"
               placeholder="johndoe@xyz.com"
+              value={email}
+              onChange={handleChange}
             />
             <textarea
               name="message"
               id="message"
               cols={30}
               rows={10}
-              defaultValue="Tell us your thoughts here ....."
+              value={message}
+              onChange={handleChange}
             ></textarea>
             <input type="submit" value="send us" />
           </form>
