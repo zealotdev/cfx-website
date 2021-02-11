@@ -10,7 +10,7 @@ export default function () {
           <button className={styles.ctaOne}>apply now</button>
         </Link>
         <Link href="/notice">
-          <button className={styles.ctaTwo}>sing in</button>
+          <button className={styles.ctaTwo}>sign in</button>
         </Link>
       </div>
     </section>
