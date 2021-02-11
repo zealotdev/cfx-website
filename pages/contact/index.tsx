@@ -4,12 +4,12 @@ import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import styles from "../../styles/Contact.module.scss";
 import { useState } from "react";
-
+import emailjs from "emailjs-com";
 const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
 
 const center = {
-  lat: -3.386925,
-  lng: 36.682995,
+  lat: -3.3706968,
+  lng: 36.6850069,
 };
 const containerStyle = {
   width: "100%",
@@ -29,6 +29,7 @@ export default function Contact() {
     fullname: "",
     email: "",
     message: "",
+    subject: "",
   };
   const [input, setInput] = useState(initialData);
   const handleChange = (e) => {
@@ -38,9 +39,19 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(input);
+    emailjs
+      .sendForm("service_zqho6ry", "cfx_69ngylf", e.target, "user_pLNr5Apvkvf8j1AiOVRRR")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
-  const { fullname, email, message } = input;
+  const { fullname, email, message, subject } = input;
   return (
     <>
       <Head>
@@ -81,8 +92,18 @@ export default function Contact() {
               value={email}
               onChange={handleChange}
             />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Greetings"
+              value={subject}
+              onChange={handleChange}
+            />
+
             <textarea
               name="message"
+              placeholder="Tell us what is in your mind......"
               id="message"
               cols={30}
               rows={10}
