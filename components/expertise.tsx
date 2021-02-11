@@ -67,9 +67,9 @@ export default function () {
             <div className={styles.card_content}>
               <div className={styles.card_title}>Real Estate Agency.</div>
               <div className={styles.card_desc}>
-                We believe technology plays an important role on success of
-                almost all human economic-endeavor. And we at CFX we have a
-                recipe for you.
+                Through our-owned Lands and Buildings we target on long term
+                development and investment. We also provide knowledge on Real
+                Estate Investment Business.
               </div>
             </div>
           </div>{' '}
@@ -83,13 +83,11 @@ export default function () {
               />
             </div>
             <div className={styles.card_content}>
-              <div className={styles.card_title}>
-                Agricultural & Mining business.
-              </div>
+              <div className={styles.card_title}>Agricultural business.</div>
               <div className={styles.card_desc}>
-                We believe technology plays an important role on success of
-                almost all human economic-endeavor. And we at CFX we have a
-                recipe for you.
+                Our agribusiness programmes proven to be one of the safe
+                investment option <strong>one</strong> can confidently choose to
+                opt.
               </div>
             </div>
           </div>
