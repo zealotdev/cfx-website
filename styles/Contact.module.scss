@@ -5,11 +5,6 @@
   display: grid;
   grid-template-columns: 45% 45%;
   grid-gap: 5%;
-  @include for-phone-only {
-    display: grid;
-    grid-template-rows: 45% 45%;
-    grid-gap: 5%;
-  }
 }
 .articles{
     margin-left: 20px;
