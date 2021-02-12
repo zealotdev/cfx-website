@@ -97,6 +97,9 @@
       &:hover {
         background-color: darken($primaryColor, 15);
       }
+      @include for-phone-only{
+        
+      }
     }
   }
 
