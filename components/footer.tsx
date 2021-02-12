@@ -74,6 +74,7 @@ export default function Footer(props) {
               <TwiiterIcon fontSize={'large'} />
             </a>
             <a href="#">
+              new
               <FacebookIcon fontSize={'large'} />
             </a>
             <a href="#">
