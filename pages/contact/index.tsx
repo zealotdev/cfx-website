@@ -1,16 +1,16 @@
-import Head from "next/head";
+import Head from 'next/head';
 import {
   GoogleMap,
   LoadScript,
   Marker,
   InfoWindow,
-} from "@react-google-maps/api";
-import NavBar from "../../components/navBar";
-import Footer from "../../components/footer";
-import styles from "../../styles/Contact.module.scss";
-import { useState } from "react";
-import emailjs from "emailjs-com";
-const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
+} from '@react-google-maps/api';
+import NavBar from '../../components/navBar';
+import Footer from '../../components/footer';
+import styles from '../../styles/Contact.module.scss';
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
+const API_KEYS = 'AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM';
 
 const center = {
   lat: -3.370764,
@@ -18,11 +18,11 @@ const center = {
 };
 
 const containerStyle = {
-  width: "100%",
-  height: "100%",
+  width: '100%',
+  height: '100%',
 };
 const position = {
-  lat: -3.370764,
+  lat: -3.370699,
   lng: 36.68609999,
 };
 
@@ -33,18 +33,18 @@ const divStyle = {
 };
 
 const onLoad = (marker) => {
-  console.log("marker: ", marker);
+  console.log('marker: ', marker);
 };
 
 export default function Contact() {
   const initialData = {
-    fullname: "",
-    email: "",
-    message: "",
-    subject: "",
+    fullname: '',
+    email: '',
+    message: '',
+    subject: '',
   };
 
-  const [infoWindow, setInfoWindow] = useState("");
+  const [infoWindow, setInfoWindow] = useState('');
 
   const [input, setInput] = useState(initialData);
   const handleChange = (e) => {
@@ -56,10 +56,10 @@ export default function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_zqho6ry",
-        "cfx_69ngylf",
+        'service_zqho6ry',
+        'cfx_69ngylf',
         e.target,
-        "user_pLNr5Apvkvf8j1AiOVRRR"
+        'user_pLNr5Apvkvf8j1AiOVRRR'
       )
       .then(
         (result) => {
@@ -80,12 +80,12 @@ export default function Contact() {
       </Head>
       <NavBar />
       <main className={styles.container}>
-        <section className={styles.articles}>
+        <section className={styles.map}>
           <LoadScript googleMapsApiKey={API_KEYS}>
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}
-              zoom={17}
+              zoom={21}
             >
               {/* Child components, such as markers, info windows, etc. */}
               <>
@@ -99,6 +99,7 @@ export default function Contact() {
             </GoogleMap>
           </LoadScript>
         </section>
+        <span className={styles.separator}></span>
         <section>
           <form className={styles.form_container} onSubmit={handleSubmit}>
             <input
