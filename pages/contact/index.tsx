@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import NavBar from '../../components/navBar';
-import Footer from '../../components/footer';
-import styles from '../../styles/Contact.module.scss';
-import { useState } from 'react';
-import emailjs from 'emailjs-com';
-const API_KEYS = 'AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM';
+import Head from "next/head";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import NavBar from "../../components/navBar";
+import Footer from "../../components/footer";
+import styles from "../../styles/Contact.module.scss";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
 
 const center = {
   lat: -3.370764,
@@ -13,8 +13,8 @@ const center = {
 };
 
 const containerStyle = {
-  width: '100%',
-  height: '100%',
+  width: "100%",
+  height: "100%",
 };
 const position = {
   lat: -3.370699,
@@ -22,15 +22,15 @@ const position = {
 };
 
 const onLoad = (marker) => {
-  console.log('marker: ', marker);
+  console.log("marker: ", marker);
 };
 
 export default function Contact() {
   const initialData = {
-    fullname: '',
-    email: '',
-    message: '',
-    subject: '',
+    fullname: "",
+    email: "",
+    message: "",
+    subject: "",
   };
 
   const [input, setInput] = useState(initialData);
@@ -43,20 +43,23 @@ export default function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_8uigy3v',
-        'template_35zdwph',
+        "service_8uigy3v",
+        "template_35zdwph",
         e.target,
-        'user_mQsV3hUcDRJsd4vJV5X89'
+        "user_mQsV3hUcDRJsd4vJV5X89"
       )
       .then(
         (result) => {
+          // alert(result.text);
           console.log(result.text);
-          e.target.reset();
+          // e.target.reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
+
+    e.target = "";
   };
   const { fullname, email, message, subject } = input;
   return (
