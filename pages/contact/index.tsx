@@ -22,7 +22,7 @@ const containerStyle = {
   height: '100%',
 };
 const position = {
-  lat: -3.370764,
+  lat: -3.370699,
   lng: 36.68609999,
 };
 
@@ -85,7 +85,7 @@ export default function Contact() {
             <GoogleMap
               mapContainerStyle={containerStyle}
               center={center}
-              zoom={17}
+              zoom={21}
             >
               {/* Child components, such as markers, info windows, etc. */}
               <>
