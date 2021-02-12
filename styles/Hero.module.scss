@@ -1,5 +1,5 @@
-@import './mixins/media.scss';
-@import './utils/presets.scss';
+@import "./mixins/media.scss";
+@import "./utils/presets.scss";
 
 .heroSection {
   position: relative;
@@ -25,13 +25,13 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     background-image: linear-gradient(
         to top right,
         rgba(10, 17, 27, 0.3) 50%,
         rgba(223, 168, 46, 0.8)
       ),
-      url('../public/globe.png');
+      url("../public/globe.png");
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -58,7 +58,7 @@
       padding-left: 8rem;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 50%;

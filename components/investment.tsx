@@ -6,10 +6,12 @@ export default function () {
     <section className={styles.investmentSection}>
       <h2 className={styles.title}>Interested in investing with us?</h2>
       <div className={styles.ctaButtons}>
-        <Link href="/application">
+        <Link href="/notice">
           <button className={styles.ctaOne}>apply now</button>
         </Link>
-        <button className={styles.ctaTwo}>sing in</button>
+        <Link href="/notice">
+          <button className={styles.ctaTwo}>sing in</button>
+        </Link>
       </div>
     </section>
   );

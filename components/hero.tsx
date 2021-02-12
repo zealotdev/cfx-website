@@ -1,6 +1,8 @@
-import Image from 'next/image';
 
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Hero.module.scss';
+
 
 export default function () {
   return (
@@ -10,12 +12,14 @@ export default function () {
         Technological Innovative Investment Solutions, tailored to grow you
         financially.
       </h1>
-      <p>
+      <p>git 
         Humanitarian and technological integrated tailored-solutions have proven
         to be the best approach towards tackling 21st century problems. And we,
         at CFX are here to show you how.
       </p>
-      <button>Get Started.</button>
+      <Link href="/notice">
+        <button>Get Started.</button>
+      </Link>
     </section>
   );
 }
