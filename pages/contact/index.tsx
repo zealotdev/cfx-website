@@ -1,5 +1,10 @@
 import Head from "next/head";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import styles from "../../styles/Contact.module.scss";
@@ -8,16 +13,23 @@ import emailjs from "emailjs-com";
 const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
 
 const center = {
-  lat: -3.3706968,
-  lng: 36.6850069,
+  lat: -3.370764,
+  lng: 36.68609999,
 };
+
 const containerStyle = {
   width: "100%",
-  height: "400px",
+  height: "100%",
 };
 const position = {
-  lat: -3.3706968,
-  lng: 36.6850069,
+  lat: -3.370764,
+  lng: 36.68609999,
+};
+
+const divStyle = {
+  background: `white`,
+  border: `1px solid #ccc`,
+  padding: 15,
 };
 
 const onLoad = (marker) => {
@@ -31,6 +43,9 @@ export default function Contact() {
     message: "",
     subject: "",
   };
+
+  const [infoWindow, setInfoWindow] = useState("");
+
   const [input, setInput] = useState(initialData);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +55,12 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_zqho6ry", "cfx_69ngylf", e.target, "user_pLNr5Apvkvf8j1AiOVRRR")
+      .sendForm(
+        "service_zqho6ry",
+        "cfx_69ngylf",
+        e.target,
+        "user_pLNr5Apvkvf8j1AiOVRRR"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -70,6 +90,11 @@ export default function Contact() {
               {/* Child components, such as markers, info windows, etc. */}
               <>
                 <Marker onLoad={onLoad} position={position} />
+                {/* <InfoWindow onLoad={onLoad} position={position}>
+                  <div style={divStyle}>
+                    <h1>InfoWindow</h1>
+                  </div>
+                </InfoWindow> */}
               </>
             </GoogleMap>
           </LoadScript>
@@ -83,6 +108,7 @@ export default function Contact() {
               placeholder="John Doe"
               value={fullname}
               onChange={handleChange}
+              required
             />
             <input
               type="email"
@@ -91,6 +117,7 @@ export default function Contact() {
               placeholder="johndoe@xyz.com"
               value={email}
               onChange={handleChange}
+              required
             />
             <input
               type="text"
@@ -99,6 +126,7 @@ export default function Contact() {
               placeholder="Greetings"
               value={subject}
               onChange={handleChange}
+              required
             />
 
             <textarea
@@ -109,6 +137,7 @@ export default function Contact() {
               rows={10}
               value={message}
               onChange={handleChange}
+              required
             ></textarea>
             <input type="submit" value="send us" />
           </form>
