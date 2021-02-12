@@ -51,12 +51,12 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
-    e.target.reset();
   };
   const { fullname, email, message, subject } = input;
   return (
