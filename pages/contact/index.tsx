@@ -50,16 +50,13 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          // alert(result.text);
           console.log(result.text);
-          // e.target.reset();
         },
         (error) => {
           console.log(error.text);
         }
       );
-
-    e.target = "";
+      setInput(initialData);
   };
   const { fullname, email, message, subject } = input;
   return (
@@ -86,7 +83,11 @@ export default function Contact() {
         </section>
         <span className={styles.separator}></span>
         <section>
-          <form className={styles.form_container} onSubmit={handleSubmit}>
+          <form
+            className={styles.form_container}
+            onSubmit={handleSubmit}
+            name="form"
+          >
             <input
               type="text"
               name="fullname"
