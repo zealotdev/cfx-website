@@ -56,6 +56,7 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+      alert("Thank you for reaching out us")
       setInput(initialData);
   };
   const { fullname, email, message, subject } = input;
