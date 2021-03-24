@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import MenuIcon from "@material-ui/icons/Menu";
-import ClearIcon from "@material-ui/icons/Clear";
-import styles from "../styles/NavBar.module.scss";
-import MobileNav from "./mobileNav";
-import { useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import MenuIcon from '@material-ui/icons/Menu';
+import ClearIcon from '@material-ui/icons/Clear';
+import styles from '../styles/NavBar.module.scss';
+import MobileNav from './mobileNav';
+import { useState } from 'react';
 
 export default function NavBar() {
   const [click, setClick] = useState(false);
@@ -26,15 +26,11 @@ export default function NavBar() {
           </Link>
         </span>
         <div className={styles.nav_tooltip}>
-          <Link href="/notice">
-            <button onClick={onCloseMenu}>Sign In</button>
-          </Link>
-
           <div className={styles.nav_humburger}>
             {click ? (
-              <ClearIcon fontSize={"large"} onClick={handleClick} />
+              <ClearIcon fontSize={'large'} onClick={handleClick} />
             ) : (
-              <MenuIcon fontSize={"large"} onClick={handleClick} />
+              <MenuIcon fontSize={'large'} onClick={handleClick} />
             )}
           </div>
         </div>
@@ -65,17 +61,17 @@ export default function NavBar() {
       )}
       <div className={styles.nav_el}>
         <ul className={styles.nav_links}>
-          <li className={styles.nav_link_item} >
+          <li className={styles.nav_link_item}>
             <Link href="/">
               <a>Home</a>
             </Link>
           </li>
-          <li className={styles.nav_link_item} >
+          <li className={styles.nav_link_item}>
             <Link href="/about">
               <a>About Us</a>
             </Link>
           </li>
-          <li className={styles.nav_link_item} >
+          <li className={styles.nav_link_item}>
             <Link href="/contact">
               <a>Contact Us</a>
             </Link>

@@ -26,7 +26,7 @@
 
 .ctaButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 40%;
 
   @include for-xsmall-only {
@@ -64,10 +64,4 @@
     font-size: 1.4rem;
     padding: 1rem 1.2rem;
   }
-}
-.ctaTwo {
-  @extend .ctaOne;
-  background-color: $secondaryColor;
-  color: $primaryColor;
-  border: 2px solid $primaryColor;
 }

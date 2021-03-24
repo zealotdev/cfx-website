@@ -41,8 +41,8 @@ export default function About() {
               <div className={styles.valueDetails}>
                 <span>Secured Service.</span>
                 <p>
-                  Our sole purpose is to provide assurance and security to our
-                  customers.
+                  Our sole purpose is to provide assurance and security to
+                  whoever we work with.
                 </p>
               </div>
             </div>
@@ -56,8 +56,8 @@ export default function About() {
               <div className={styles.valueDetails}>
                 <span>Quality Delivery.</span>
                 <p>
-                  Our sole purpose is to provide assurance and security to our
-                  customers.
+                  To keep our client satisfaction on check we have to ensure our
+                  services are on quality and timely delivered.
                 </p>
               </div>
             </div>
@@ -66,8 +66,8 @@ export default function About() {
               <div className={styles.valueDetails}>
                 <span>Result Oriented.</span>
                 <p>
-                  Our sole purpose is to provide assurance and security to our
-                  customers.
+                  It's not about what we do, that matters - it's what we do for
+                  you.
                 </p>
               </div>
             </div>
