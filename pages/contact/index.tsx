@@ -8,7 +8,7 @@ import emailjs from "emailjs-com";
 const API_KEYS = "AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM";
 
 const center = {
-  lat: -3.370764,
+  lat: -3.370699,
   lng: 36.68609999,
 };
 
@@ -56,7 +56,9 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+
       setInput(initialData);
+
   };
   const { fullname, email, message, subject } = input;
   return (
