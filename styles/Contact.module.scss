@@ -27,8 +27,6 @@
   }
 }
 .separator {
-  // margin: 0 5rem;
-
   @include for-tablet-landscape-up {
     margin: 0 2rem;
   }

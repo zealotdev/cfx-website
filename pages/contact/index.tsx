@@ -1,10 +1,5 @@
 import Head from 'next/head';
-import {
-  GoogleMap,
-  LoadScript,
-  Marker,
-  InfoWindow,
-} from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import NavBar from '../../components/navBar';
 import Footer from '../../components/footer';
 import styles from '../../styles/Contact.module.scss';
@@ -13,7 +8,7 @@ import emailjs from 'emailjs-com';
 const API_KEYS = 'AIzaSyBe_pZIcnKoz9Lxknnj2Fm09yLm6At-7RM';
 
 const center = {
-  lat: -3.370764,
+  lat: -3.370699,
   lng: 36.68609999,
 };
 
@@ -24,12 +19,6 @@ const containerStyle = {
 const position = {
   lat: -3.370699,
   lng: 36.68609999,
-};
-
-const divStyle = {
-  background: `white`,
-  border: `1px solid #ccc`,
-  padding: 15,
 };
 
 const onLoad = (marker) => {
@@ -44,8 +33,6 @@ export default function Contact() {
     subject: '',
   };
 
-  const [infoWindow, setInfoWindow] = useState('');
-
   const [input, setInput] = useState(initialData);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,10 +43,10 @@ export default function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_zqho6ry',
-        'cfx_69ngylf',
+        'service_8uigy3v',
+        'template_35zdwph',
         e.target,
-        'user_pLNr5Apvkvf8j1AiOVRRR'
+        'user_mQsV3hUcDRJsd4vJV5X89'
       )
       .then(
         (result) => {
@@ -90,11 +77,6 @@ export default function Contact() {
               {/* Child components, such as markers, info windows, etc. */}
               <>
                 <Marker onLoad={onLoad} position={position} />
-                {/* <InfoWindow onLoad={onLoad} position={position}>
-                  <div style={divStyle}>
-                    <h1>InfoWindow</h1>
-                  </div>
-                </InfoWindow> */}
               </>
             </GoogleMap>
           </LoadScript>
