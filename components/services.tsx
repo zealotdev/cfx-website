@@ -19,8 +19,10 @@ export default function Services() {
           <section className={styles.services_list}>
             <div className={styles.services_listItemOne}>
               <div className={styles.services_listItemOneTitle}>
-                Digital Investment Consultancy <br /> & <br /> Agency
+                Digital Investment <br /> & <br />
+                Consultancy Agency
               </div>
+
               <div className={styles.services_listItemOneDetails}>
                 <ul>
                   <li>
@@ -48,16 +50,22 @@ export default function Services() {
               <div className={styles.services_listItemTwoDetails}>
                 <ul>
                   <li>
-                    Get introduced to different digital investment
-                    opportunities.
+                    A team of experts is here to ice crack that technology idea
+                    for you.
                   </li>
                   <li>
-                    Get trained and mentored the right way, and start earning on
-                    you own.
+                    Digital Marketing and Branding services to help you reach
+                    your targeted customers.
                   </li>
                   <li>
-                    Tired of loosing? We provide account management service to
-                    forex traders just like you.
+                    Want to build your website or web system using trending
+                    technologies that top companies like facebook uses? CFX is
+                    here to do it for you.
+                  </li>
+                  <li>
+                    As technology grows and online services increases, data
+                    protection becomes concerns to many, and we CFX provide an
+                    extensive data protection guidance.
                   </li>
                 </ul>
                 <Link href="/notice">
@@ -67,26 +75,27 @@ export default function Services() {
                 </Link>
               </div>
               <div className={styles.services_listItemTwoTitle}>
-                Technology Consultancy Services
+                Technology Consultancy <br />& Services
               </div>
             </div>
             <div className={styles.services_listItemOne}>
               <div className={styles.services_listItemOneTitle}>
-                Real Estate Agency
+                Real Estate <br /> & Agriculture business
               </div>
               <div className={styles.services_listItemOneDetails}>
                 <ul>
                   <li>
-                    Get introduced to different digital investment
-                    opportunities.
+                    Farmland for rent, for those looking for a land to
+                    cultivate.
                   </li>
                   <li>
-                    Get trained and mentored the right way, and start earning on
-                    you own.
+                    Want to turn your land into a business?, CFX is here to
+                    consult you about it.
                   </li>
                   <li>
-                    Tired of loosing? We provide account management service to
-                    forex traders just like you.
+                    Our agribusiness projects gives you an opportunity to invest
+                    in agriculture without a need of you to own a farm or have
+                    an abounding capital.
                   </li>
                 </ul>
                 <Link href="/notice">
@@ -101,16 +110,12 @@ export default function Services() {
               <div className={styles.services_listItemTwoDetails}>
                 <ul>
                   <li>
-                    Get introduced to different digital investment
-                    opportunities.
+                    We can help redirect your funds into the right place, with
+                    little risk and high fund-security.
                   </li>
                   <li>
-                    Get trained and mentored the right way, and start earning on
-                    you own.
-                  </li>
-                  <li>
-                    Tired of loosing? We provide account management service to
-                    forex traders just like you.
+                    The company runs a couple of investment projects that you
+                    can confidently invest in.
                   </li>
                 </ul>
                 <Link href="/notice">
@@ -120,7 +125,7 @@ export default function Services() {
                 </Link>
               </div>
               <div className={styles.services_listItemTwoTitle}>
-                Investment Management
+                Investment Management Consultancy service
               </div>
             </div>
           </section>
