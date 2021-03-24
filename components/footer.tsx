@@ -26,7 +26,7 @@ export default function Footer(props) {
       <div className={styles.footerDetails}>
         <div className={styles.addresses}>
           <div className={styles.address}>
-            <span className={styles.subTitle}>Tanzania Office</span>
+            <span className={styles.subTitle}>Arusha Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
               <li>Phone : +255 769 156 394</li>
@@ -34,7 +34,7 @@ export default function Footer(props) {
             </ul>
           </div>
           <div className={styles.address}>
-            <span className={styles.subTitle}>Nigeria Office</span>
+            <span className={styles.subTitle}>Dar es Salaam Office</span>
             <ul className={styles.contents}>
               <li>Head Office: Mega Complex - 3rd Floor. Arusha, Tanzania</li>
               <li>Phone : +255 634 345 324</li>
@@ -74,7 +74,6 @@ export default function Footer(props) {
               <TwiiterIcon fontSize={'large'} />
             </a>
             <a href="#">
-              new
               <FacebookIcon fontSize={'large'} />
             </a>
             <a href="#">
