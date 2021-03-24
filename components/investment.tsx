@@ -9,9 +9,6 @@ export default function () {
         <Link href="/notice">
           <button className={styles.ctaOne}>apply now</button>
         </Link>
-        <Link href="/notice">
-          <button className={styles.ctaTwo}>sing in</button>
-        </Link>
       </div>
     </section>
   );
